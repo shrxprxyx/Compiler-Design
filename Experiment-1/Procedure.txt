@@ -1,0 +1,10 @@
+PROCEDURE:
+1. Open a terminal and create a new FLEX file, symtab.l. In the definitions section, include headers and declare the symbol table array along with insert()/lookup() helper
+2. functions. In the rules section, define patterns for identifiers, constants, comments, and operators.
+3. Use { printf(...) } actions to print the recognized tokens and call insert() for identifiers.
+4. Save and compile the file using:
+    flex symtab.l
+    gcc lex.yy.c -o symtab -lfl
+5. Run the executable:
+    ./symtab input.c
+6.Observe the output and verify the tokens and symbol table entries

@@ -1,0 +1,40 @@
+BEGIN
+    Initialize symbol table as an empty array
+    Set symbol table count = 0
+
+    Define patterns:
+        IDENTIFIER = letter or underscore followed by letters, digits or underscore
+        CONSTANT   = one or more digits
+        COMMENT    = //... or /*...*/
+        OPERATOR   = +, -, *, /, =, <, >
+
+    For each token read from the input C program:
+
+        IF token matches IDENTIFIER THEN
+            Check whether identifier exists in symbol table
+            IF identifier does not exist THEN
+                Insert identifier into symbol table
+            END IF
+            Print "Identifier" and token
+
+        ELSE IF token matches CONSTANT THEN
+            Print "Constant" and token
+
+        ELSE IF token matches COMMENT THEN
+            Print "Comment" and token
+
+        ELSE IF token matches OPERATOR THEN
+            Print "Operator" and token
+
+        END IF
+
+    Repeat until end of input
+
+    Print "SYMBOL TABLE"
+
+    For each entry in symbol table:
+        Print name and type
+
+    Stop
+
+END
