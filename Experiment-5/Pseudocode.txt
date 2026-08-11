@@ -1,0 +1,30 @@
+PSEUDOCODE:
+BEGIN
+    Define tokens for:
+        IF, ELSE, FOR, WHILE, SWITCH, CASE
+        Parentheses, Braces, Semicolon and other symbols
+
+    Read the C control structure using FLEX.
+
+    FLEX identifies keywords and symbols
+    and passes the corresponding tokens to BISON.
+
+    Define grammar rules for:
+        IF statement
+        IF-ELSE statement
+        IF-ELSE-IF ladder
+        WHILE loop
+        FOR loop
+        SWITCH-CASE statement
+
+    Pass the tokens to BISON for parsing.
+
+    IF the input matches any valid grammar rule THEN
+        Print "Valid Control Structure"
+    ELSE
+        Print "Invalid Control Structure"
+    END IF
+
+    Stop
+
+END

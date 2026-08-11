@@ -1,0 +1,2 @@
+AIM:
+To write a program to recognize a valid control structure syntax of C language using FLEX and BISON.
