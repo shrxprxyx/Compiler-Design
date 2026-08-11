@@ -1,0 +1,30 @@
+PSEUDOCODE:
+BEGIN
+    Define tokens:
+        LET = any alphabetic character
+        DIG = any digit
+
+    Define grammar:
+        VARIABLE → LET
+                 | LET VARIABLE
+                 | LET DIG
+                 | LET VARIABLE DIG
+
+    Read the input variable using FLEX.
+
+    FLEX identifies each character as LET or DIG.
+
+    Pass the tokens to BISON.
+
+    BISON checks the input according to the grammar.
+
+    IF the variable starts with a letter AND
+       all remaining characters are letters or digits THEN
+        Print "Valid Variable"
+    ELSE
+        Print "Invalid Variable"
+    END IF
+
+    Stop
+
+END

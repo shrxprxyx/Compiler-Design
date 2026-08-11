@@ -1,0 +1,12 @@
+PROCEDURE:
+1. Create the FLEX file valvar.l using a text editor. Define token patterns for letters and digits, and return them as LET and DIG tokens.
+2. Save and close the file.
+3. Create the BISON file valvar.y. Define grammar rules that recognize valid variable names (starting with a letter and followed by letters or digits). Save and close the BISON file.
+4. Open terminal/command prompt and compile using:
+    o flex valvar.l
+    o bison -d valvar.y
+    o gcc lex.yy.c valvar.tab.c -o valvar -lfl
+5. Run the program: 
+    o ./valvar
+6. Enter test inputs like abc1, var123, 1abc to test validation.
+7. Observe whether the variable is valid or invalid.
