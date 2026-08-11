@@ -1,0 +1,40 @@
+PSEUDOCODE:
+BEGIN
+    Define tokens for:
+        IDENTIFIER
+        NUMBER
+        +, -, *, /
+        =
+
+    Initialize temporary variable counter = 1
+
+    Read the arithmetic expression using FLEX
+
+    FLEX identifies identifiers, numbers and operators
+    and passes the tokens to BISON
+
+    Define grammar rules for arithmetic expressions
+
+    Apply operator precedence:
+        * and / have higher precedence
+        + and - have lower precedence
+
+    During parsing:
+
+        IF an arithmetic operation is found THEN
+            Create a new temporary variable
+            Generate TAC:
+                temp = operand1 operator operand2
+            Store the temporary variable as the result
+
+        IF an assignment is found THEN
+            Generate:
+                variable = result
+
+    Continue until the complete expression is parsed
+
+    Display the generated Three-Address Code
+
+    Stop
+
+END

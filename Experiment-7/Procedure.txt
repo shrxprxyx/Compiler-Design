@@ -1,0 +1,12 @@
+PROCEDURE:
+1. Create the FLEX file tac.l:
+    o Tokenize input using patterns for identifiers, numbers, and operators. o Pass tokens to BISON. Create the BISON file tac.y:
+    o Parse arithmetic expressions. o Generate three-address code using temporary variables (t1, t2, etc.) during parsing.
+2. Compile and run:
+    o flex tac.l
+    o bison -d tac.y
+    o gcc tac.tab.c lex.yy.c -o tac -lfl
+    o ./tac
+3. Input an arithmetic expression like:
+    o a = b + c * d
+4. View generated three-address code.
