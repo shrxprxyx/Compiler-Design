@@ -1,0 +1,13 @@
+PROCEDURE:
+1. Create a file named cal.l and define patterns to identify numbers using regular expressions.
+2. For matched digits, return the token NUM and store the number using yylval.
+3. Create another file named cal.y to define grammar rules for arithmetic expressions using BISON.
+4. Include operator precedence and associativity using %left and %right.
+5. Add rules to evaluate expressions like E + E, E - E, E * E, and E / E.
+6. Compile both files using the following commands:
+    o flex cal.l
+    o bison -d cal.y
+    o gcc lex.yy.c cal.tab.c -o calc -lfl
+7. Run the compiled program: ./calc
+8. Enter arithmetic expressions and view the result. 
+9. Test with multiple expressions to verify both valid and invalid cases.

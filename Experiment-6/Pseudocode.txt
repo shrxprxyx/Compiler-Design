@@ -1,0 +1,34 @@
+PSEUDOCODE:
+BEGIN
+    Define token NUM for numbers
+
+    Read arithmetic expression using FLEX
+
+    FLEX identifies numbers and returns NUM token
+
+    Define grammar rules:
+        Expression → Expression + Expression
+                   | Expression - Expression
+                   | Expression * Expression
+                   | Expression / Expression
+                   | (Expression)
+                   | NUM
+
+    Apply operator precedence:
+        * and / have higher precedence
+        + and - have lower precedence
+
+    Pass tokens from FLEX to BISON
+
+    BISON parses and evaluates the expression
+
+    IF expression is valid THEN
+        Calculate the result
+        Display the result
+    ELSE
+        Display "Invalid Expression"
+    END IF
+
+    Stop
+
+END
