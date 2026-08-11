@@ -1,0 +1,3 @@
+AIM:
+To write a program to recognize a valid arithmetic expression that uses operator +, - , * and / using FLEXand
+BISON.

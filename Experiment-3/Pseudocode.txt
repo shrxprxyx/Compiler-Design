@@ -1,0 +1,39 @@
+PSEUDOCODE:
+BEGIN
+    Define tokens for:
+        NUMBER
+        PLUS (+)
+        MINUS (-)
+        MULTIPLY (*)
+        DIVIDE (/)
+
+    Define grammar rules for arithmetic expressions:
+        Expression → Expression + Term
+                   | Expression - Term
+                   | Term
+                   
+        Term → Term * Factor
+             | Term / Factor
+             | Factor
+
+        Factor → NUMBER
+
+    Ignore whitespaces in the input.
+
+    Read the arithmetic expression using FLEX.
+
+    Pass the recognized tokens from FLEX to BISON.
+
+    BISON checks the input according to the grammar.
+
+    IF the expression matches the grammar THEN
+        Print "Valid Expression"
+    ELSE
+        Print "Invalid Expression"
+    END IF
+
+    Continue until the end of input.
+
+    Stop
+
+END
