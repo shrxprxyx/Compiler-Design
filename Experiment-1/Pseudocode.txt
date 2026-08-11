@@ -1,3 +1,4 @@
+PROCEDURE:
 BEGIN
     Initialize symbol table as an empty array
     Set symbol table count = 0

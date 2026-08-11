@@ -1,0 +1,7 @@
+PROCEDURE:
+1. Create a file with .l extension, lexer.l, where you write the FLEX code.
+2. Inside the file, define how to recognize tokens using regular expressions.
+3. Use the flex command to convert your .l file into a C program (lex.yy.c).
+4. Compile the generated C program using gcc to produce an executable.
+5. Run the executable and give it input C code. 
+6. The output will show you which tokens were recognized.

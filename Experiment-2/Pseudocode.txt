@@ -1,0 +1,47 @@
+PSEUDOCODE:
+BEGIN
+    Define regular expressions for:
+        Keywords
+        Identifiers
+        Constants/Numbers
+        Operators
+        Delimiters
+        Preprocessor directives
+        Header files
+
+    Initialize FLEX scanner
+
+    Read the C source code
+
+    WHILE input is not finished DO
+
+        Get the next token
+
+        IF token matches a keyword THEN
+            Print "Keyword" and token
+
+        ELSE IF token matches an identifier THEN
+            Print "Identifier" and token
+
+        ELSE IF token matches a number THEN
+            Print "Number/Constant" and token
+
+        ELSE IF token matches an operator THEN
+            Print "Operator" and token
+
+        ELSE IF token matches a delimiter THEN
+            Print "Delimiter" and token
+
+        ELSE IF token matches a preprocessor directive THEN
+            Print "Preprocessor Directive" and token
+
+        ELSE IF token matches a header file THEN
+            Print "Header File" and token
+
+        END IF
+
+    END WHILE
+
+    Stop
+
+END
